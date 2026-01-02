@@ -1,0 +1,97 @@
+.cerbere-main {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    color: #222;
+}
+
+.sheet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #444;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.sheet-header h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.toggle-edit {
+    font-size: 14px;
+}
+
+.dice-section h2,
+.description-section h2 {
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 3px;
+    margin-bottom: 10px;
+}
+
+.dice-buttons button {
+    margin-right: 5px;
+}
+
+.description-section label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.description-section textarea {
+    width: 100%;
+    height: 60px;
+}
+
+.description-section input[type="text"],
+.description-section input[type="number"] {
+    width: 100%;
+}
+
+.blessures-display {
+    margin: 5px 0 10px 10px;
+}
+
+.blessures-display label {
+    display: block;
+    margin-bottom: 3px;
+}
+
+/* --- MODE EDITION / AFFICHAGE --- */
+/* Par défaut : mode affichage */
+.edit-mode {
+    display: none;
+}
+
+/* Quand la case est cochée : on inverse */
+.edit-toggle:checked ~ .view-mode {
+    display: none;
+}
+
+.edit-toggle:checked ~ .edit-mode {
+    display: block;
+}
+
+/* Style du bouton */
+.charsheet .toggle-edit {
+    display: inline-block !important;
+    width: auto !important;
+    padding: 4px 8px;
+    background: #ddd;
+    border: 1px solid #aaa;
+    cursor: pointer;
+    font-size: 13px;
+    border-radius: 4px;
+}
+
+/* Ajouter un symbole quand le mode édition est actif */
+.charsheet .edit-toggle:checked + .toggle-edit::after {
+    content: " ✎";
+    font-weight: bold;
+}
+
+/* Mode par défaut : affichage */
+.view-mode span {
+    display: block;
+    margin-bottom: 5px;
+}
