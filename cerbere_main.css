@@ -49,12 +49,7 @@
 }
 
 .blessures-display {
-    margin: 5px 0 10px 10px;
-}
-
-.blessures-display label {
-    display: block;
-    margin-bottom: 3px;
+    margin: 5px 0 10px 0px;
 }
 
 /* --- MODE EDITION / AFFICHAGE --- */
