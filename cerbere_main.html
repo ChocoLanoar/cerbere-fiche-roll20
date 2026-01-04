@@ -18,9 +18,10 @@
     <div class="view-mode">
       <p><strong>Nom</strong><span name="attr_nom"></span></p>
       <p><strong>Description</strong><span name="attr_description"></span></p>
-      <p><strong>Points de vie</strong><span name="attr_pv"></span></p>
-      <p><strong>Points de confiance</strong><span name="attr_confiance"></span></p>
-      <p><strong>XP</strong><span name="attr_xp"></span></p>
+      <p><strong>PV</strong><span name="attr_pv" title="Points de Vie"></span></p>
+      <p><strong>PC</strong><span name="attr_pc" title="Points de Confiance"></span></p>
+      <p><strong>PR</strong><span name="attr_pr" title="Ressources"></span></p>
+      <p><strong>XP</strong><span name="attr_xp" title="Points d’expérience"></span></p>
       <div class="blessures-display"><strong>Blessures</strong>
         <input type="checkbox" name="attr_blessure1"/>
         <input type="checkbox" name="attr_blessure2"/>
@@ -31,8 +32,7 @@
       </p>
       <h3>Compétences</h3><span name="attr_competences"></span>
       <h3>Talents</h3><span name="attr_talents"></span>
-      <h3>Équipements</h3><span name="attr_equipements"></span>
-      <h3>Relations</h3><span name="attr_relations"></span>
+      <h3>Équipement</h3><span name="attr_equipements"></span>
     </div>
     <div class="edit-mode">
       <label>Nom
@@ -41,13 +41,19 @@
       <label>Description
         <textarea name="attr_description"></textarea>
       </label>
-      <label>Points de vie
+      <label>Points de Vie
         <input type="number" name="attr_pv"/>
       </label>
-      <label>Points de confiance
-        <input type="number" name="attr_confiance"/>
+      <label>Points de Vie max
+        <input type="number" name="attr_pv_max"/>
       </label>
-      <label>XP
+      <label>Points de Confiance
+        <input type="number" name="attr_pc"/>
+      </label>
+      <label>Ressources
+        <input type="number" name="attr_pr"/>
+      </label>
+      <label>Points d’expérience
         <input type="number" name="attr_xp"/>
       </label>
       <label>Compétences :
@@ -56,11 +62,8 @@
       <label>Talents :
         <textarea name="attr_talents"></textarea>
       </label>
-      <label>Équipements :
+      <label>Équipement :
         <textarea name="attr_equipements"></textarea>
-      </label>
-      <label>Relations :
-        <textarea name="attr_relations"></textarea>
       </label>
     </div>
   </section>

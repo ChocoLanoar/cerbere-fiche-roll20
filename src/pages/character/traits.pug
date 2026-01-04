@@ -1,0 +1,13 @@
+mixin trait-view(spine)
+  p
+    strong Nom
+    span(name="attr_nom")
+  p
+    strong Description
+    span(name="attr_description")
+
+mixin trait-edit(spine)
+  label Nom
+    input(type="text", name="attr_nom")
+  label Description
+    textarea(name="attr_description")

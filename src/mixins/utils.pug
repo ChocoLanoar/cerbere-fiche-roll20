@@ -1,0 +1,10 @@
+mixin display-value(blob)
+  - const attr = `attr_${blob.name}`;
+  p
+    strong= blob.label
+    span(name=attr, title=blob.title)
+
+mixin display-input(blob)
+  - const attr = `attr_${blob.name}`;
+  label= blob.label
+    input(type=blob.type, name=attr)

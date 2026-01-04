@@ -53,9 +53,14 @@
 }
 
 /* --- MODE EDITION / AFFICHAGE --- */
-/* Par défaut : mode affichage */
+/* Par défaut : mode édition */
 .edit-mode {
     display: none;
+}
+
+.view-mode span {
+    display: block;
+    margin-bottom: 5px;
 }
 
 /* Quand la case est cochée : on inverse */
@@ -83,10 +88,4 @@
 .charsheet .edit-toggle:checked + .toggle-edit::after {
     content: " ✎";
     font-weight: bold;
-}
-
-/* Mode par défaut : affichage */
-.view-mode span {
-    display: block;
-    margin-bottom: 5px;
 }

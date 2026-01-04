@@ -1,0 +1,7 @@
+mixin points-view(spine)
+  each field in spine.points.view
+    +display-value(field)
+
+mixin points-edit(spine)
+  each field in spine.points.fields
+    +display-input(field)

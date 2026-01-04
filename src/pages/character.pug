@@ -1,21 +1,23 @@
-.view-mode
-  include character/general_attributes_view
+include character/traits
+include character/points
+include character/blessures
+include character/competences
+include character/talents
+include character/equipement
 
-  include character/competences_view
+mixin character-view(spine)
+  .view-mode
+    +trait-view(spine)
+    +points-view(spine)
+    +blessures-view(spine)
+    +competences-view(spine)
+    +talents-view(spine)
+    +equipement-view(spine)
 
-  include character/talents_view
-
-  include character/equipement_view
-
-  include character/relations_view
-
-.edit-mode
-  include character/general_attributes_edit
-
-  include character/competences_edit
-
-  include character/talents_edit
-
-  include character/equipement_edit
-
-  include character/relations_edit
+mixin character-edit(spine)
+  .edit-mode
+    +trait-edit(spine)
+    +points-edit(spine)
+    +competences-edit(spine)
+    +talents-edit(spine)
+    +equipement-edit(spine)

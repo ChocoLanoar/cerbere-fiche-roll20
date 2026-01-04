@@ -1,3 +1,6 @@
+include layout/spine
+include mixins/utils
+include pages/character
 
 .cerbere-main
   header.sheet-header
@@ -16,4 +19,5 @@
     input(type="checkbox", class="edit-toggle", name="attr_editmode", id="editmode-toggle", hidden)
     label.toggle-edit(for="editmode-toggle") Mode édition
 
-    include pages/character
+    +character-view(spine.character)
+    +character-edit(spine.character)
