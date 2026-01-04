@@ -1,7 +1,15 @@
 mixin competences-view(spine)
-  h3 Compétences
-  span(name="attr_competences")
+  .competences-view
+    h3 Compétences
+    fieldset.repeating_competences
+      .competence-item
+        span(name="attr_nom_competence")
+      span(name="attr_desc_competence")
 
 mixin competences-edit(spine)
   label Compétences :
-    textarea(name="attr_competences")
+  fieldset.repeating_competences
+    label Nom de la compétence :
+      input(type="text", name="attr_nom_competence", value="")
+    label Description :
+      textarea(name="attr_desc_competence")

@@ -30,7 +30,12 @@
       <p><strong>Invalide</strong>
         <input type="checkbox" name="attr_invalide"/>
       </p>
-      <h3>Compétences</h3><span name="attr_competences"></span>
+      <div class="competences-view">
+        <h3>Compétences</h3>
+        <fieldset class="repeating_competences">
+          <div class="competence-item"><span name="attr_nom_competence"></span></div><span name="attr_desc_competence"></span>
+        </fieldset>
+      </div>
       <h3>Talents</h3><span name="attr_talents"></span>
       <h3>Équipement</h3><span name="attr_equipements"></span>
     </div>
@@ -56,9 +61,15 @@
       <label>Points d’expérience
         <input type="number" name="attr_xp"/>
       </label>
-      <label>Compétences :
-        <textarea name="attr_competences"></textarea>
-      </label>
+      <label>Compétences :</label>
+      <fieldset class="repeating_competences">
+        <label>Nom de la compétence :
+          <input type="text" name="attr_nom_competence" value=""/>
+        </label>
+        <label>Description :
+          <textarea name="attr_desc_competence"></textarea>
+        </label>
+      </fieldset>
       <label>Talents :
         <textarea name="attr_talents"></textarea>
       </label>

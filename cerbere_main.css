@@ -1,3 +1,17 @@
+/* --- GENERAL --- */
+/* Empêche l’ajout/suppression en mode affichage */
+.view-mode .repcontrol {
+    display: none !important;
+}
+
+.view-mode .repcontrol_add,
+.view-mode .repcontrol_edit,
+.view-mode .repcontrol_del,
+.view-mode .repcontrol_move {
+    display: none !important;
+}
+
+/* --- HEADER --- */
 .cerbere-main {
     font-family: Arial, sans-serif;
     padding: 10px;
@@ -18,10 +32,7 @@
     font-size: 20px;
 }
 
-.toggle-edit {
-    font-size: 14px;
-}
-
+/* --- SECTION JET DE DÉS --- */
 .dice-section h2,
 .description-section h2 {
     border-bottom: 1px solid #aaa;
@@ -33,6 +44,7 @@
     margin-right: 5px;
 }
 
+/* --- SECTION DESCRIPTION --- */
 .description-section label {
     display: block;
     margin-bottom: 8px;
@@ -52,7 +64,30 @@
     margin: 5px 0 10px 0px;
 }
 
+/* --- FIELDSET COMPÉTENCES --- */
+.charsheet .competences-view .competence-item {
+    display: flex;
+    align-items: center;
+}
+
+.charsheet .competences-view .competence-item::before {
+    content: "• ";
+    margin-right: 6px;
+}
+
 /* --- MODE EDITION / AFFICHAGE --- */
+/* Style du bouton */
+.charsheet .toggle-edit {
+    display: inline-block !important;
+    width: auto !important;
+    padding: 4px 8px;
+    background: #ddd;
+    border: 1px solid #aaa;
+    cursor: pointer;
+    font-size: 13px;
+    border-radius: 4px;
+}
+
 /* Par défaut : mode édition */
 .edit-mode {
     display: none;
@@ -70,18 +105,6 @@
 
 .edit-toggle:checked ~ .edit-mode {
     display: block;
-}
-
-/* Style du bouton */
-.charsheet .toggle-edit {
-    display: inline-block !important;
-    width: auto !important;
-    padding: 4px 8px;
-    background: #ddd;
-    border: 1px solid #aaa;
-    cursor: pointer;
-    font-size: 13px;
-    border-radius: 4px;
 }
 
 /* Ajouter un symbole quand le mode édition est actif */
