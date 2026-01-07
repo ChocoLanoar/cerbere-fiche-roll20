@@ -22,6 +22,11 @@ mixin display-input(blob)
     case blob.type
       when 'textarea'
         textarea(name=attr)
+      when 'checkbox'
+        if blob.status
+          input(type=blob.type, name=attr, blob.status)
+        else
+          input(type=blob.type, name=attr)
       when 'number'
       when 'text'
       default
