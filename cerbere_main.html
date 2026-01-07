@@ -37,7 +37,10 @@
       <div class="competences-view">
         <h3>Compétences</h3>
         <fieldset class="repeating_competences">
-          <div class="competence-item"><span name="attr_nom_competence"></span></div><span name="attr_desc_competence"></span>
+          <div class="competence-item"><span name="attr_competence_name"></span>
+          </div>
+          <div class="competence-desc"><span name="attr_competence_desc"></span>
+          </div>
         </fieldset>
       </div>
       <h3>Talents</h3><span name="attr_talents"></span>
@@ -50,29 +53,22 @@
       <label>Description
         <textarea name="attr_description"></textarea>
       </label>
-      <label>Points de Vie
-        <input type="number" name="attr_pv"/>
-      </label>
-      <label>Points de Vie max
-        <input type="number" name="attr_pv_max"/>
-      </label>
-      <label>Points de Confiance
-        <input type="number" name="attr_pc"/>
-      </label>
-      <label>Ressources
-        <input type="number" name="attr_pr"/>
-      </label>
-      <label>Points d’expérience
-        <input type="number" name="attr_xp"/>
-      </label>
+      <label>Points de Vie</label>
+      <input type="number" name="attr_pv" value="10"/>
+      <label>Points de Vie max</label>
+      <input type="number" name="attr_pv_max" value="10"/>
+      <label>Points de Confiance</label>
+      <input type="number" name="attr_pc" value="2"/>
+      <label>Ressources</label>
+      <input type="number" name="attr_pr" value="4"/>
+      <label>Points d’expérience</label>
+      <input type="number" name="attr_xp" value="0"/>
       <label>Compétences :</label>
       <fieldset class="repeating_competences">
-        <label>Nom de la compétence :
-          <input type="text" name="attr_nom_competence" value=""/>
-        </label>
-        <label>Description :
-          <textarea name="attr_desc_competence"></textarea>
-        </label>
+        <label>Nom de la compétence</label>
+        <input type="text" name="attr_competence_name" value=""/>
+        <label>Description</label>
+        <textarea name="attr_competence_desc"></textarea>
       </fieldset>
       <label>Talents :
         <textarea name="attr_talents"></textarea>
