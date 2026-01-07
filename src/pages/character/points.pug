@@ -1,8 +1,10 @@
 mixin points-view(spine)
-  each field in spine.points.view
-    p
-      +display-value(field)
+  .points-view
+    each field in spine.points.view
+      p
+        +display-value(field)
 
 mixin points-edit(spine)
-  each field in spine.points.fields
-    +display-input(field)
+  .points-edit
+    each field in spine.points.fields
+      +display-input(field)

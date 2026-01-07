@@ -10,7 +10,8 @@ mixin competences-view(spine)
         +display-input(comp.used)
 
 mixin competences-edit(spine)
-  label Compétences :
-  fieldset.repeating_competences
-    each field in spine.competences.fields
-      +display-input(field)
+  .competences-edit
+    label Compétences :
+    fieldset.repeating_competences
+      each field in spine.competences.fields
+        +display-input(field)

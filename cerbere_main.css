@@ -64,6 +64,16 @@
     margin: 5px 0 10px 0px;
 }
 
+/* --- AFFICHAGE DES TRAITS --- */
+.charsheet .traits-view {}
+
+.charsheet .traits-edit {}
+
+/* --- AFFICHAGE DES POINTS --- */
+.charsheet .points-view {}
+
+.charsheet .points-edit {}
+
 /* --- FIELDSET COMPÉTENCES --- */
 .charsheet .competences-view .competence-item,
 .charsheet .competences-view .competence-desc {
@@ -75,6 +85,8 @@
     content: "• ";
     margin-right: 6px;
 }
+
+.charsheet .competences-edit {}
 
 /* --- MODE EDITION / AFFICHAGE --- */
 /* Style du bouton */
