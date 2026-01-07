@@ -1,0 +1,16 @@
+mixin cultures-view(spine)
+  .cultures-view
+    h3 Cultures
+    fieldset.repeating_cultures
+      - const cult = fieldDictionary(spine.cultures.view, 'culture')
+      .culture-item
+        +display-value(cult.name)
+      .culture-desc
+        +display-value(cult.desc)
+
+mixin cultures-edit(spine)
+  .cultures-edit
+    label Cultures :
+    fieldset.repeating_cultures
+      each field in spine.cultures.fields
+        +display-input(field)

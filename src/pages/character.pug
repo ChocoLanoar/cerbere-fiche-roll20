@@ -2,6 +2,7 @@ include character/traits
 include character/points
 include character/blessures
 include character/competences
+include character/cultures
 include character/talents
 include character/equipement
 
@@ -11,6 +12,7 @@ mixin character-view(spine)
     +points-view(spine)
     +blessures-view(spine)
     +competences-view(spine)
+    +cultures-view(spine)
     +talents-view(spine)
     +equipement-view(spine)
 
@@ -19,5 +21,6 @@ mixin character-edit(spine)
     +trait-edit(spine)
     +points-edit(spine)
     +competences-edit(spine)
+    +cultures-edit(spine)
     +talents-edit(spine)
     +equipement-edit(spine)
