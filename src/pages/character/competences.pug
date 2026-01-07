@@ -2,14 +2,15 @@ mixin competences-view(spine)
   .competences-view
     h3 Compétences
     fieldset.repeating_competences
+      - const comp = fieldDictionary(spine.competences.view, 'competence')
       .competence-item
-        span(name="attr_nom_competence")
-      span(name="attr_desc_competence")
+        +display-value(comp.name)
+      .competence-desc
+        +display-value(comp.desc)
+        +display-input(comp.used)
 
 mixin competences-edit(spine)
   label Compétences :
   fieldset.repeating_competences
-    label Nom de la compétence :
-      input(type="text", name="attr_nom_competence", value="")
-    label Description :
-      textarea(name="attr_desc_competence")
+    each field in spine.competences.fields
+      +display-input(field)

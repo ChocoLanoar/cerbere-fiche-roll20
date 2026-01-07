@@ -65,7 +65,8 @@
 }
 
 /* --- FIELDSET COMPÉTENCES --- */
-.charsheet .competences-view .competence-item {
+.charsheet .competences-view .competence-item,
+.charsheet .competences-view .competence-desc {
     display: flex;
     align-items: center;
 }

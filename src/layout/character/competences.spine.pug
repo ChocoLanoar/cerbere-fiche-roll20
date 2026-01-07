@@ -1,9 +1,29 @@
 -
   spine.character.competences = {
     view: [
-      {},
+      {
+        name: 'competence_name',
+      },
+      {
+        name: 'competence_desc',
+      },
+      {
+        name: 'competence_used',
+        type: 'checkbox',
+      },
     ],
     fields: [
-      {},
+      {
+        name: 'competence_name',
+        label: 'Nom de la compétence',
+        type: 'text',
+        value: '',
+      },
+      {
+        name: 'competence_desc',
+        label: 'Description',
+        type: 'textarea',
+        value: '',
+      },
     ]
   }
