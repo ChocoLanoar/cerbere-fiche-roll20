@@ -1,3 +1,12 @@
+-
+  const fieldDictionary = (fields, removePrefix='') => {
+    return fields.reduce((memo, val) => {
+      const key = removePrefix ? val.name.replace(`${removePrefix}_`, '') : val.name;
+      memo[key] = structuredClone(val);
+      return memo
+    }, {});
+  }
+
 mixin display-value(blob)
   - const attr = `attr_${blob.name}`;
   if blob.label
@@ -7,8 +16,13 @@ mixin display-value(blob)
 
 mixin display-input(blob)
   - const attr = `attr_${blob.name}`;
+  - const default_value = blob.value ? blob.value : ''
   if blob.label
     label= blob.label
-      input(type=blob.type, name=attr)
-  else
-      input(type=blob.type, name=attr)
+    case blob.type
+      when 'textarea'
+        textarea(name=attr)
+      when 'number'
+      when 'text'
+      default
+        input(type=blob.type, name=attr, value=default_value)
