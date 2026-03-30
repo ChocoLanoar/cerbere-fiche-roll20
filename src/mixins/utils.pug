@@ -11,8 +11,10 @@ mixin display-value(blob)
   - const attr = `attr_${blob.name}`;
   if blob.label
     strong= blob.label
-  
-  span(name=attr, title=blob.title)
+  if blob.type
+    input(type=blob.type, name=attr, title=blob.title)
+  else
+    span(name=attr, title=blob.title)
 
 mixin display-input(blob)
   - const attr = `attr_${blob.name}`;
@@ -23,10 +25,7 @@ mixin display-input(blob)
       when 'textarea'
         textarea(name=attr)
       when 'checkbox'
-        if blob.status
-          input(type=blob.type, name=attr, blob.status)
-        else
-          input(type=blob.type, name=attr)
+        input(type=blob.type, name=attr)
       when 'number'
       when 'text'
       default
