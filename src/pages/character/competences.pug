@@ -7,7 +7,9 @@ mixin competences-view(spine)
         +display-value(comp.name)
       .competence-desc
         +display-value(comp.desc)
-        +display-value(comp.used)
+      .competence-usage
+        +display-value(comp.usage)
+        +display-value(comp.usage_max)
 
 mixin competences-edit(spine)
   .competences-edit

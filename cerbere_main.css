@@ -77,6 +77,7 @@
 /* --- FIELDSET COMPÉTENCES/CULTURES --- */
 .charsheet .competences-view .competence-item,
 .charsheet .competences-view .competence-desc,
+.charsheet .competences-view .competence-usage,
 .charsheet .cultures-view .culture-item,
 .charsheet .cultures-view .culture-desc {
     display: flex;

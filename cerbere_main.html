@@ -43,8 +43,10 @@
         <fieldset class="repeating_competences">
           <div class="competence-item"><span name="attr_competence_name"></span>
           </div>
-          <div class="competence-desc"><span name="attr_competence_desc"></span><strong>Utilisée ?</strong>
-            <input type="checkbox" name="attr_competence_used"/>
+          <div class="competence-desc"><span name="attr_competence_desc"></span>
+          </div>
+          <div class="competence-usage"><strong>Utilisations : </strong>
+            <input type="number" name="attr_competence_usage"/><strong>max : </strong><span name="attr_competence_usage_max"></span>
           </div>
         </fieldset>
       </div>
@@ -88,6 +90,8 @@
           <input type="text" name="attr_competence_name" value=""/>
           <label>Description</label>
           <textarea name="attr_competence_desc"></textarea>
+          <label>Nombre d’utilisations</label>
+          <input type="number" name="attr_competence_usage_max" value="0"/>
         </fieldset>
       </div>
       <div class="cultures-edit">
