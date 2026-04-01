@@ -1,0 +1,16 @@
+mixin maitrises-view(spine)
+  .maitrises-view
+    h3 Maîtrises
+    fieldset.repeating_maitrises
+      - const cult = fieldDictionary(spine.maitrises.view, 'maitrise')
+      .maitrise-item
+        +display-value(cult.name)
+      .maitrise-desc
+        +display-value(cult.desc)
+
+mixin maitrises-edit(spine)
+  .maitrises-edit
+    label Maîtrises :
+    fieldset.repeating_maitrises
+      each field in spine.maitrises.fields
+        +display-input(field)

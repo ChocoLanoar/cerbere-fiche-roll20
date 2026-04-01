@@ -74,12 +74,14 @@
 
 .charsheet .points-edit {}
 
-/* --- FIELDSET COMPÉTENCES/CULTURES/TALENTS --- */
+/* --- FIELDSET COMPÉTENCES/CULTURES/MAITRISES/TALENTS --- */
 .charsheet .competences-view .competence-item,
 .charsheet .competences-view .competence-desc,
 .charsheet .competences-view .competence-usage,
 .charsheet .cultures-view .culture-item,
 .charsheet .cultures-view .culture-desc,
+.charsheet .maitrises-view .maitrise-item,
+.charsheet .maitrises-view .maitrise-desc,
 .charsheet .talents-view .talent-item,
 .charsheet .talents-view .talent-desc,
 .charsheet .talents-view .talent-usage {
@@ -89,6 +91,7 @@
 
 .charsheet .competences-view .competence-item::before,
 .charsheet .cultures-view .culture-item::before,
+.charsheet .maitrises-view .maitrise-item::before,
 .charsheet .talents-view .talent-item::before {
     content: "• ";
     margin-right: 6px;
@@ -96,6 +99,7 @@
 
 .charsheet .competences-edit,
 .charsheet .cultures-edit,
+.charsheet .maitrises-edit,
 .charsheet .talents-edit {}
 
 /* --- MODE EDITION / AFFICHAGE --- */
