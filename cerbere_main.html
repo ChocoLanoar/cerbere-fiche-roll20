@@ -59,7 +59,18 @@
           </div>
         </fieldset>
       </div>
-      <h3>Talents</h3><span name="attr_talents"></span>
+      <div class="talents-view">
+        <h3>Talents</h3>
+        <fieldset class="repeating_talents">
+          <div class="talent-item"><span name="attr_talent_name"></span>
+          </div>
+          <div class="talent-desc"><span name="attr_talent_desc"></span>
+          </div>
+          <div class="talent-usage"><strong>Utilisations : </strong>
+            <input type="number" name="attr_talent_usage"/><strong>max : </strong><span name="attr_talent_usage_max"></span>
+          </div>
+        </fieldset>
+      </div>
       <h3>Équipement</h3><span name="attr_equipements"></span>
     </div>
     <div class="edit-mode">
@@ -103,9 +114,17 @@
           <textarea name="attr_culture_desc"></textarea>
         </fieldset>
       </div>
-      <label>Talents :
-        <textarea name="attr_talents"></textarea>
-      </label>
+      <div class="talents-edit">
+        <label>Talents :</label>
+        <fieldset class="repeating_talents">
+          <label>Nom du talent</label>
+          <input type="text" name="attr_talent_name" value=""/>
+          <label>Description</label>
+          <textarea name="attr_talent_desc"></textarea>
+          <label>Nombre d’utilisations</label>
+          <input type="number" name="attr_talent_usage_max" value="0"/>
+        </fieldset>
+      </div>
       <label>Équipement :
         <textarea name="attr_equipements"></textarea>
       </label>

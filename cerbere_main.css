@@ -74,24 +74,29 @@
 
 .charsheet .points-edit {}
 
-/* --- FIELDSET COMPÉTENCES/CULTURES --- */
+/* --- FIELDSET COMPÉTENCES/CULTURES/TALENTS --- */
 .charsheet .competences-view .competence-item,
 .charsheet .competences-view .competence-desc,
 .charsheet .competences-view .competence-usage,
 .charsheet .cultures-view .culture-item,
-.charsheet .cultures-view .culture-desc {
+.charsheet .cultures-view .culture-desc,
+.charsheet .talents-view .talent-item,
+.charsheet .talents-view .talent-desc,
+.charsheet .talents-view .talent-usage {
     display: flex;
     align-items: center;
 }
 
 .charsheet .competences-view .competence-item::before,
-.charsheet .cultures-view .culture-item::before {
+.charsheet .cultures-view .culture-item::before,
+.charsheet .talents-view .talent-item::before {
     content: "• ";
     margin-right: 6px;
 }
 
 .charsheet .competences-edit,
-.charsheet .cultures-edit {}
+.charsheet .cultures-edit,
+.charsheet .talents-edit {}
 
 /* --- MODE EDITION / AFFICHAGE --- */
 /* Style du bouton */

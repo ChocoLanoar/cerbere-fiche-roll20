@@ -1,7 +1,19 @@
 mixin talents-view(spine)
-  h3 Talents
-  span(name="attr_talents")
+  .talents-view
+    h3 Talents
+    fieldset.repeating_talents
+      - const talent = fieldDictionary(spine.talents.view, 'talent')
+      .talent-item
+        +display-value(talent.name)
+      .talent-desc
+        +display-value(talent.desc)
+      .talent-usage
+        +display-value(talent.usage)
+        +display-value(talent.usage_max)
 
 mixin talents-edit(spine)
-  label Talents :
-    textarea(name="attr_talents")
+  .talents-edit
+    label Talents :
+    fieldset.repeating_talents
+      each field in spine.talents.fields
+        +display-input(field)
