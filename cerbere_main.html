@@ -80,7 +80,16 @@
           </div>
         </fieldset>
       </div>
-      <h3>Équipement</h3><span name="attr_equipements"></span>
+      <div class="equipement-view">
+        <h3>Équipement</h3>
+        <fieldset class="repeating_equipement">
+          <div class="equipement-item"><span name="attr_equipement_name"></span>
+          </div>
+        </fieldset>
+        <h4>Les trois trucs</h4>
+        <div class="equipement-trucs"><span name="attr_equipement_truc1"></span><span name="attr_equipement_truc2"></span><span name="attr_equipement_truc3"></span>
+        </div>
+      </div>
     </div>
     <div class="edit-mode">
       <div class="traits-edit">
@@ -143,9 +152,17 @@
           <input type="number" name="attr_talent_usage_max" value="0"/>
         </fieldset>
       </div>
-      <label>Équipement :
-        <textarea name="attr_equipements"></textarea>
-      </label>
+      <div class="equipement-edit">
+        <label>Équipement :</label>
+        <fieldset class="repeating_equipement">
+          <label>Nom et description</label>
+          <input type="text" name="attr_equipement_name" value=""/>
+        </fieldset>
+        <label>Les trois trucs :</label>
+        <input type="text" name="attr_equipement_truc1" value=""/>
+        <input type="text" name="attr_equipement_truc2" value=""/>
+        <input type="text" name="attr_equipement_truc3" value=""/>
+      </div>
     </div>
   </section>
 </div>

@@ -1,7 +1,22 @@
 mixin equipement-view(spine)
-  h3 Équipement
-  span(name="attr_equipements")
+  .equipement-view
+    h3 Équipement
+    - const equip = fieldDictionary(spine.equipement.view, 'equipement')
+    fieldset.repeating_equipement
+      .equipement-item
+        +display-value(equip.name)
+    h4 Les trois trucs
+    .equipement-trucs
+      +display-value(equip.truc1)
+      +display-value(equip.truc2)
+      +display-value(equip.truc3)
 
 mixin equipement-edit(spine)
-  label Équipement :
-    textarea(name="attr_equipements")
+  .equipement-edit
+    label Équipement :
+    fieldset.repeating_equipement
+      each field in spine.equipement.fields
+        +display-input(field)
+    label Les trois trucs :
+    each truc in spine.equipement.trucs
+      +display-input(truc)

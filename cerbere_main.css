@@ -74,7 +74,7 @@
 
 .charsheet .points-edit {}
 
-/* --- FIELDSET COMPÉTENCES/CULTURES/MAITRISES/TALENTS --- */
+/* --- FIELDSET VIEW --- */
 .charsheet .competences-view .competence-item,
 .charsheet .competences-view .competence-desc,
 .charsheet .competences-view .competence-usage,
@@ -84,7 +84,9 @@
 .charsheet .maitrises-view .maitrise-desc,
 .charsheet .talents-view .talent-item,
 .charsheet .talents-view .talent-desc,
-.charsheet .talents-view .talent-usage {
+.charsheet .talents-view .talent-usage,
+.charsheet .equipement-view .equipement-item,
+.charsheet .equipement-view .equipement-truc {
     display: flex;
     align-items: center;
 }
@@ -92,7 +94,8 @@
 .charsheet .competences-view .competence-item::before,
 .charsheet .cultures-view .culture-item::before,
 .charsheet .maitrises-view .maitrise-item::before,
-.charsheet .talents-view .talent-item::before {
+.charsheet .talents-view .talent-item::before,
+.charsheet .equipement-view .equipement-item::before {
     content: "• ";
     margin-right: 6px;
 }
@@ -100,7 +103,8 @@
 .charsheet .competences-edit,
 .charsheet .cultures-edit,
 .charsheet .maitrises-edit,
-.charsheet .talents-edit {}
+.charsheet .talents-edit,
+.charsheet .equipement-edit {}
 
 /* --- MODE EDITION / AFFICHAGE --- */
 /* Style du bouton */

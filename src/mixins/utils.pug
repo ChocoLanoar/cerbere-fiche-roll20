@@ -21,12 +21,12 @@ mixin display-input(blob)
   - const default_value = blob.value ? blob.value : ''
   if blob.label
     label= blob.label
-    case blob.type
-      when 'textarea'
-        textarea(name=attr)
-      when 'checkbox'
-        input(type=blob.type, name=attr)
-      when 'number'
-      when 'text'
-      default
-        input(type=blob.type, name=attr, value=default_value)
+  case blob.type
+    when 'textarea'
+      textarea(name=attr)
+    when 'checkbox'
+      input(type=blob.type, name=attr)
+    when 'number'
+    when 'text'
+    default
+      input(type=blob.type, name=attr, value=default_value)
