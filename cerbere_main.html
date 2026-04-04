@@ -21,11 +21,16 @@
         <p><strong>Description</strong><span name="attr_description"></span></p>
       </div>
       <div class="points-view">
-        <p><strong>PV</strong><span name="attr_pv" title="Points de Vie"></span>
+        <p><strong>PV</strong>
+          <input type="number" name="attr_pv" title="Points de Vie"/>
         </p>
-        <p><strong>PC</strong><span name="attr_pc" title="Points de Confiance"></span>
+        <p><strong>PV max</strong><span name="attr_pv_max"></span>
         </p>
-        <p><strong>PR</strong><span name="attr_pr" title="Ressources"></span>
+        <p><strong>PC</strong>
+          <input type="number" name="attr_pc" title="Points de Confiance"/>
+        </p>
+        <p><strong>PR</strong>
+          <input type="number" name="attr_pr" title="Ressources"/>
         </p>
         <p><strong>XP</strong><span name="attr_xp" title="Points d’expérience"></span>
         </p>
@@ -33,11 +38,9 @@
       <div class="blessures-display"><strong>Blessures</strong>
         <input type="checkbox" name="attr_blessure1"/>
         <input type="checkbox" name="attr_blessure2"/>
-        <input type="checkbox" name="attr_blessure3"/>
-      </div>
-      <p><strong>Invalide</strong>
+        <input type="checkbox" name="attr_blessure3"/><strong>Invalide</strong>
         <input type="checkbox" name="attr_invalide"/>
-      </p>
+      </div>
       <div class="competences-view">
         <h3>Compétences</h3>
         <fieldset class="repeating_competences">
@@ -101,8 +104,6 @@
         </label>
       </div>
       <div class="points-edit">
-        <label>Points de Vie</label>
-        <input type="number" name="attr_pv" value="10"/>
         <label>Points de Vie max</label>
         <input type="number" name="attr_pv_max" value="10"/>
         <label>Points de Confiance</label>
