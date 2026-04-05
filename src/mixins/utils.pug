@@ -11,6 +11,8 @@ mixin display-value(blob)
   - const attr = `attr_${blob.name}`;
   if blob.css
     p(class=blob.css)
+      if blob.icon
+        img(class='default-icon', src=blob.icon alt='')
       if blob.label
         strong= blob.label
       if blob.type
@@ -18,6 +20,8 @@ mixin display-value(blob)
       else
         span(name=attr, title=blob.title)
   else
+    if blob.icon
+      img(class='default-icon', src=blob.icon alt='')
     if blob.label
       strong= blob.label
     if blob.type

@@ -185,6 +185,14 @@
     color: #222;
 }
 
+.charsheet .point-line .default-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    flex-shrink: 0;
+    opacity: 0.9;
+}
+
 /* --- FIELDSET VIEW --- */
 .view-mode fieldset {
     border: none;
