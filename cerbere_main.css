@@ -13,9 +13,12 @@
 
 /* --- HEADER --- */
 .cerbere-main {
-    font-family: Arial, sans-serif;
-    padding: 10px;
+    font-family: "Segoe UI", Arial, sans-serif;
     color: #222;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 6px;
+    border: 1px solid #ccc;
 }
 
 .sheet-header {
@@ -28,15 +31,66 @@
 }
 
 .sheet-header h1 {
+    font-size: 22px;
     margin: 0;
-    font-size: 20px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #444;
+}
+
+/* --- MODE EDITION / MODE VUE --- */
+/* Par défaut : mode édition */
+.edit-mode {
+    display: none;
+}
+
+.view-mode {
+    margin-top: 10px;
+}
+
+.view-mode p,
+.view-mode span {
+    margin: 3px 0;
+}
+
+.view-mode h3 {
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    border-left: 4px solid #888;
+    padding-left: 6px;
+    color: #444;
+}
+
+.view-mode > div {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 14px;
+}
+
+/* Quand la case est cochée : on inverse */
+.edit-toggle:checked ~ .view-mode {
+    display: none;
+}
+
+.edit-toggle:checked ~ .edit-mode {
+    display: block;
+}
+
+/* Ajouter un symbole quand le mode édition est actif */
+.charsheet .edit-toggle:checked + .toggle-edit::after {
+    content: " ✎";
+    font-weight: bold;
 }
 
 /* --- SECTION JET DE DÉS --- */
-.dice-section h2,
-.description-section h2 {
-    border-bottom: 1px solid #aaa;
-    padding-bottom: 3px;
+.description-section h2,
+.dice-section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 2px solid #bbb;
+    padding-bottom: 4px;
     margin-bottom: 10px;
 }
 
@@ -60,33 +114,102 @@
     width: 100%;
 }
 
+/* --- BLESSURES --- */
 .blessures-display {
-    margin: 5px 0 10px 0px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.blessures-display strong {
+    margin-right: 4px;
+}
+
+.blessures-display input[type="checkbox"] {
+    transform: scale(1.2);
+}
+
+.view-mode input[name="attr_invalide"] {
+    transform: scale(1.2);
+    margin-left: 8px;
 }
 
 /* --- AFFICHAGE DES TRAITS --- */
-.charsheet .traits-view {}
+.charsheet .traits-view p {
+    margin: 4px 0;
+}
+
+.charsheet .traits-view strong {
+    display: inline-block;
+    width: 110px;
+    font-weight: 600;
+}
 
 .charsheet .traits-edit {}
 
 /* --- AFFICHAGE DES POINTS --- */
-.charsheet .points-view {}
+.charsheet .points-view {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* deux colonnes */
+    gap: 6px 20px; /* espace vertical + horizontal */
+}
 
-.charsheet .points-edit {}
+/* Chaque ligne PV/PC/PR/XP */
+.charsheet .point-line {
+    display: flex;
+    align-items: center;
+    gap: 6px; /* espace entre label et valeur */
+    margin: 0;
+}
+
+/* Label (PV, PC, etc.) */
+.charsheet .point-line strong {
+    width: 70px; /* largeur fixe = alignement parfait */
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* Champs numériques */
+.charsheet .point-line input[type="number"] {
+    width: 55px;
+    padding: 2px 4px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Valeurs non éditables (span) */
+.charsheet .point-line span {
+    font-weight: 700;
+    color: #222;
+}
 
 /* --- FIELDSET VIEW --- */
-.charsheet .competences-view .competence-item,
+.view-mode fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
 .charsheet .competences-view .competence-desc,
 .charsheet .competences-view .competence-usage,
-.charsheet .cultures-view .culture-item,
 .charsheet .cultures-view .culture-desc,
-.charsheet .maitrises-view .maitrise-item,
 .charsheet .maitrises-view .maitrise-desc,
-.charsheet .talents-view .talent-item,
 .charsheet .talents-view .talent-desc,
 .charsheet .talents-view .talent-usage,
-.charsheet .equipement-view .equipement-item,
 .charsheet .equipement-view .equipement-truc {
+    display: flex;
+    align-items: center;
+}
+
+.charsheet .competences-view .competence-item,
+.charsheet .cultures-view .culture-item,
+.charsheet .maitrises-view .maitrise-item,
+.charsheet .talents-view .talent-item,
+.charsheet .equipement-view .equipement-item {
+    font-weight: 600;
+    margin-top: 6px;
     display: flex;
     align-items: center;
 }
@@ -98,6 +221,58 @@
 .charsheet .equipement-view .equipement-item::before {
     content: "• ";
     margin-right: 6px;
+    color: #666;
+}
+
+.repeating_competences .competence-desc,
+.repeating_cultures .culture-desc,
+.repeating_maitrises .maitrise-desc,
+.repeating_talents .talent-desc {
+    margin-left: 12px;
+    font-size: 13px;
+    color: #444;
+}
+
+.talent-usage,
+.competence-usage {
+    margin-left: 12px;
+    font-size: 12px;
+    color: #555;
+}
+
+.competence-usage input,
+.talent-usage input {
+    width: 45px;
+    padding: 2px 4px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.competence-usage > * ,
+.talent-usage > * {
+    margin-right: 8px;
+}
+
+.competence-usage,
+.talent-usage {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* encore plus propre */
+    margin-top: 4px;
+}
+
+.equipement-view .equipement-truc span {
+    display: inline-block;
+    background: #eee;
+    padding: 4px 6px;
+    margin-right: 6px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.equipement-view .equipement-trucs span:not(:last-child)::after {
+    content: ", ";
 }
 
 .charsheet .competences-edit,
@@ -117,29 +292,4 @@
     cursor: pointer;
     font-size: 13px;
     border-radius: 4px;
-}
-
-/* Par défaut : mode édition */
-.edit-mode {
-    display: none;
-}
-
-.view-mode span {
-    display: block;
-    margin-bottom: 5px;
-}
-
-/* Quand la case est cochée : on inverse */
-.edit-toggle:checked ~ .view-mode {
-    display: none;
-}
-
-.edit-toggle:checked ~ .edit-mode {
-    display: block;
-}
-
-/* Ajouter un symbole quand le mode édition est actif */
-.charsheet .edit-toggle:checked + .toggle-edit::after {
-    content: " ✎";
-    font-weight: bold;
 }
