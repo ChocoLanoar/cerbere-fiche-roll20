@@ -9,12 +9,21 @@
 
 mixin display-value(blob)
   - const attr = `attr_${blob.name}`;
-  if blob.label
-    strong= blob.label
-  if blob.type
-    input(type=blob.type, name=attr, title=blob.title)
+  if blob.css
+    p(class=blob.css)
+      if blob.label
+        strong= blob.label
+      if blob.type
+        input(type=blob.type, name=attr, title=blob.title)
+      else
+        span(name=attr, title=blob.title)
   else
-    span(name=attr, title=blob.title)
+    if blob.label
+      strong= blob.label
+    if blob.type
+      input(type=blob.type, name=attr, title=blob.title)
+    else
+      span(name=attr, title=blob.title)
 
 mixin display-input(blob)
   - const attr = `attr_${blob.name}`;

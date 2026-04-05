@@ -1,7 +1,7 @@
 
 <div class="cerbere-main">
   <header class="sheet-header">
-    <h1>Fiche de Personnage</h1>
+    <h1>Cerbère</h1>
   </header>
   <section class="dice-section">
     <h2>Jets de dés</h2>
@@ -21,18 +21,18 @@
         <p><strong>Description</strong><span name="attr_description"></span></p>
       </div>
       <div class="points-view">
-        <p><strong>PV</strong>
-          <input type="number" name="attr_pv" title="Points de Vie"/>
+        <p class="point-line"><strong>PV</strong>
+          <input type="number" name="attr_hp" title="Points de Vie"/>
         </p>
-        <p><strong>PV max</strong><span name="attr_pv_max"></span>
+        <p class="point-line"><strong>PV max</strong><span name="attr_hp_max"></span>
         </p>
-        <p><strong>PC</strong>
+        <p class="point-line"><strong>PC</strong>
           <input type="number" name="attr_pc" title="Points de Confiance"/>
         </p>
-        <p><strong>PR</strong>
+        <p class="point-line"><strong>PR</strong>
           <input type="number" name="attr_pr" title="Ressources"/>
         </p>
-        <p><strong>XP</strong><span name="attr_xp" title="Points d’expérience"></span>
+        <p class="point-line"><strong>XP</strong><span name="attr_xp" title="Points d’expérience"></span>
         </p>
       </div>
       <div class="blessures-display"><strong>Blessures</strong>
@@ -105,7 +105,7 @@
       </div>
       <div class="points-edit">
         <label>Points de Vie max</label>
-        <input type="number" name="attr_pv_max" value="10"/>
+        <input type="number" name="attr_hp_max" value="10"/>
         <label>Points de Confiance</label>
         <input type="number" name="attr_pc" value="2"/>
         <label>Ressources</label>
