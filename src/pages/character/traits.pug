@@ -2,7 +2,7 @@ mixin trait-view(spine)
   .traits-view
     p
       strong Nom
-      span(name="attr_nom")
+      span(name="attr_character_name")
     p
       strong Description
       span(name="attr_description")
@@ -10,6 +10,6 @@ mixin trait-view(spine)
 mixin trait-edit(spine)
   .traits-edit
     label Nom
-      input(type="text", name="attr_nom")
+      input(type="text", name="attr_character_name")
     label Description
       textarea(name="attr_description")
