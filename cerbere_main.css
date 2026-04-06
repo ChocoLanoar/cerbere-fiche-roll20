@@ -92,9 +92,24 @@
 
 .dice-buttons {
     display: flex;
+    flex-direction: column;
     gap: 12px;
     margin-top: 10px;
     justify-content: center;
+}
+
+.dice-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.dice-row-title {
+    font-weight: 700;
+    margin-right: 10px;
+    min-width: 120px;
+    text-align: right;
 }
 
 .dice-btn::before {
@@ -346,8 +361,23 @@
     font-weight: inherit !important;
 }
 
+.sheet-rolltemplate-cerbere-combat .inlinerollresult,
+.sheet-rolltemplate-cerbere-combat .inlinerollresult.showtip,
+.sheet-rolltemplate-cerbere-combat .inlinerollresult.fullcrit,
+.sheet-rolltemplate-cerbere-combat .inlinerollresult.fullfail,
+.sheet-rolltemplate-cerbere-combat .inlinerollresult.importantroll {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    color: inherit !important;
+    font-weight: inherit !important;
+}
+
 /* --- CONTAINER --- */
-.sheet-rolltemplate-cerbere .sheet-rt-container {
+.sheet-rolltemplate-cerbere .sheet-rt-container,
+.sheet-rolltemplate-cerbere-combat .sheet-rt-container {
     background: #fff;
     border: 1px solid #ccc;
     padding: 10px 12px;
@@ -357,7 +387,8 @@
 }
 
 /* --- TITRE --- */
-.sheet-rolltemplate-cerbere .sheet-rt-container h3 {
+.sheet-rolltemplate-cerbere .sheet-rt-container h3,
+.sheet-rolltemplate-cerbere-combat .sheet-rt-container h3 {
     margin: 0 0 8px 0;
     padding-bottom: 4px;
     border-bottom: 2px solid #444;
@@ -366,13 +397,15 @@
 }
 
 /* --- LISTE DES DÉS --- */
-.sheet-rolltemplate-cerbere .sheet-rt-results {
+.sheet-rolltemplate-cerbere .sheet-rt-results,
+.sheet-rolltemplate-cerbere-combat .sheet-rt-results {
     display: flex;
     gap: 8px;
 }
 
 /* --- STYLE DE CHAQUE DÉ --- */
-.sheet-rolltemplate-cerbere .sheet-rt-die {
+.sheet-rolltemplate-cerbere .sheet-rt-die,
+.sheet-rolltemplate-cerbere-combat .sheet-rt-die {
     width: 32px;
     height: 32px;
     border: 2px solid #aaa;
@@ -381,6 +414,21 @@
     align-items: center;
     justify-content: center;
     font-size: 18px;
+    font-weight: 700;
+}
+
+.sheet-rolltemplate-cerbere .sheet-rt-legend,
+.sheet-rolltemplate-cerbere-combat .sheet-rt-legend {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #444;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.sheet-rolltemplate-cerbere .sheet-rt-legend span,
+.sheet-rolltemplate-cerbere-combat .sheet-rt-legend span {
     font-weight: 700;
 }
 
@@ -400,15 +448,22 @@
     color: #2e7d32;
 }
 
-.sheet-rolltemplate-cerbere .sheet-rt-legend {
-    margin-top: 8px;
-    font-size: 12px;
-    color: #444;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
+.sheet-rolltemplate-cerbere-combat .sheet-rt-0dmg {
+    border-color: #666;
+    color: #666;
 }
 
-.sheet-rolltemplate-cerbere .sheet-rt-legend span {
-    font-weight: 700;
+.sheet-rolltemplate-cerbere-combat .sheet-rt-1dmg {
+    border-color: #F57C00;
+    color: #F57C00;
+}
+
+.sheet-rolltemplate-cerbere-combat .sheet-rt-2dmg {
+    border-color: #C62828;
+    color: #C62828;
+}
+
+.sheet-rolltemplate-cerbere-combat .sheet-rt-3dmg {
+    border-color: #7B1E3A;
+    color: #7B1E3A;
 }

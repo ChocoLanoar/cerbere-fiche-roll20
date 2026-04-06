@@ -41,3 +41,57 @@ rolltemplate.sheet-rolltemplate-cerbere
       .sheet-rt-fail 1–2 Échec
       .sheet-rt-mid 3–7 Réussite mineure / Échec mineur
       .sheet-rt-win 8-10 Réussite majeure
+
+rolltemplate.sheet-rolltemplate-cerbere-combat
+  .rt-container
+    h3 {{rollname}}
+    .rt-results
+      | {{#roll1}}
+      | {{#rollLess() roll1raw 3}}
+      div(class="rt-die rt-0dmg") {{roll1}}
+      | {{/rollLess() roll1raw 3}}
+      | {{#rollBetween() roll1raw 3 7}}
+      div(class="rt-die rt-1dmg") {{roll1}}
+      | {{/rollBetween() roll1raw 3 7}}
+      | {{#rollBetween() roll1raw 8 9}}
+      div(class="rt-die rt-2dmg") {{roll1}}
+      | {{/rollBetween() roll1raw 8 9}}
+      | {{#rollGreater() roll1raw 9}}
+      div(class="rt-die rt-3dmg") {{roll1}}
+      | {{/rollGreater() roll1raw 9}}
+      | {{/roll1}}
+
+      | {{#roll2}}
+      | {{#rollLess() roll2raw 3}}
+      div(class="rt-die rt-0dmg") {{roll2}}
+      | {{/rollLess() roll2raw 3}}
+      | {{#rollBetween() roll2raw 3 7}}
+      div(class="rt-die rt-1dmg") {{roll2}}
+      | {{/rollBetween() roll2raw 3 7}}
+      | {{#rollBetween() roll2raw 8 9}}
+      div(class="rt-die rt-2dmg") {{roll2}}
+      | {{/rollBetween() roll2raw 8 9}}
+      | {{#rollGreater() roll2raw 9}}
+      div(class="rt-die rt-3dmg") {{roll2}}
+      | {{/rollGreater() roll2raw 9}}
+      | {{/roll2}}
+
+      | {{#roll3}}
+      | {{#rollLess() roll3raw 3}}
+      div(class="rt-die rt-0dmg") {{roll3}}
+      | {{/rollLess() roll3raw 3}}
+      | {{#rollBetween() roll3raw 3 7}}
+      div(class="rt-die rt-1dmg") {{roll3}}
+      | {{/rollBetween() roll3raw 3 7}}
+      | {{#rollBetween() roll3raw 8 9}}
+      div(class="rt-die rt-2dmg") {{roll3}}
+      | {{/rollBetween() roll3raw 8 9}}
+      | {{#rollGreater() roll3raw 9}}
+      div(class="rt-die rt-3dmg") {{roll3}}
+      | {{/rollGreater() roll3raw 9}}
+      | {{/roll3}}
+    .sheet-rt-legend
+      .sheet-rt-0dmg 1–2 = 0 dégâts/soins
+      .sheet-rt-1dmg 3–7 = 1 dégâts/soins
+      .sheet-rt-2dmg 8-9 = 2 dégâts/soins
+      .sheet-rt-3dmg 10 = 3 dégâts/soins
