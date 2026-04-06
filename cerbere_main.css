@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+
 /* --- GENERAL --- */
 /* Empêche l’ajout/suppression en mode affichage */
 .view-mode .repcontrol {
@@ -22,19 +24,13 @@
 }
 
 .sheet-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #444;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-}
-
-.sheet-header h1 {
-    font-size: 22px;
-    margin: 0;
-    padding-bottom: 6px;
-    border-bottom: 2px solid #444;
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 /* --- MODE EDITION / MODE VUE --- */
@@ -94,14 +90,11 @@
     margin-bottom: 10px;
 }
 
-/* .dice-buttons button { */
-    /* margin-right: 5px; */
-/* } */
-
 .dice-buttons {
     display: flex;
     gap: 12px;
     margin-top: 10px;
+    justify-content: center;
 }
 
 .dice-btn::before {
