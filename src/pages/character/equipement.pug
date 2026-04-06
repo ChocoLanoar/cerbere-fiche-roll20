@@ -13,7 +13,7 @@ mixin equipement-view(spine)
 
 mixin equipement-edit(spine)
   .equipement-edit
-    label Équipement :
+    .section-title Équipement
     fieldset.repeating_equipement
       each field in spine.equipement.fields
         +display-input(field)

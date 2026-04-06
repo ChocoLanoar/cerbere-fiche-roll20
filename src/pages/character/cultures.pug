@@ -10,7 +10,7 @@ mixin cultures-view(spine)
 
 mixin cultures-edit(spine)
   .cultures-edit
-    label Cultures :
+    .section-title Cultures
     fieldset.repeating_cultures
       each field in spine.cultures.fields
         +display-input(field)

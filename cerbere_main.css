@@ -189,8 +189,6 @@
     font-weight: 600;
 }
 
-.charsheet .traits-edit {}
-
 /* --- AFFICHAGE DES POINTS --- */
 .charsheet .points-view {
     display: grid;
@@ -326,11 +324,36 @@
     content: ", ";
 }
 
+/* --- SECTION EDITION --- */
+
 .charsheet .competences-edit,
 .charsheet .cultures-edit,
 .charsheet .maitrises-edit,
 .charsheet .talents-edit,
-.charsheet .equipement-edit {}
+.charsheet .equipement-edit,
+.charsheet .traits-edit,
+.charsheet .points-edit {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    background: #fafafa;
+}
+
+.traits-edit .section-title,
+.points-edit .section-title,
+.competences-edit .section-title,
+.cultures-edit .section-title,
+.maitrises-edit .section-title,
+.talents-edit .section-title,
+.equipement-edit .section-title {
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #444;
+    text-align: center;
+}
 
 /* --- MODE EDITION / AFFICHAGE --- */
 /* Style du bouton */

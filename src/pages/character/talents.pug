@@ -13,7 +13,7 @@ mixin talents-view(spine)
 
 mixin talents-edit(spine)
   .talents-edit
-    label Talents :
+    .section-title Talents
     fieldset.repeating_talents
       each field in spine.talents.fields
         +display-input(field)

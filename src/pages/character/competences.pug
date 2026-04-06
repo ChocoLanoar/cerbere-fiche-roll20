@@ -13,7 +13,7 @@ mixin competences-view(spine)
 
 mixin competences-edit(spine)
   .competences-edit
-    label Compétences :
+    .section-title Compétences
     fieldset.repeating_competences
       each field in spine.competences.fields
         +display-input(field)

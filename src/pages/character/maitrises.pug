@@ -10,7 +10,7 @@ mixin maitrises-view(spine)
 
 mixin maitrises-edit(spine)
   .maitrises-edit
-    label Maîtrises :
+    .section-title Maîtrises
     fieldset.repeating_maitrises
       each field in spine.maitrises.fields
         +display-input(field)
