@@ -4,14 +4,20 @@ include pages/character
 
 .cerbere-main
   header.sheet-header
-    h1 Fiche de Personnage
+    h1 Cerbère
 
   section.dice-section
     h2 Jets de dés
     .dice-buttons
-      button(type="roll", value="Jet 1d10 : [[1d10cs>8]]")
-      button(type="roll", value="Jet 2d10 : [[1d10cs>8]] [[1d10cs>8]]")
-      button(type="roll", value="Jet 3d10 : [[1d10cs>8]] [[1d10cs>8]] [[1d10cs>8]]")
+      button(type="roll", class='dice-btn', value="Jet 1d10 : [[1d10cs>8]]")
+        span(class="dice-icon") J
+      button(type="roll", class='dice-btn', value="Jet 2d10 : [[1d10cs>8]] [[1d10cs>8]]")
+        span(class="dice-icon") J
+        span(class="dice-icon") J
+      button(type="roll", class='dice-btn', value="Jet 3d10 : [[1d10cs>8]] [[1d10cs>8]] [[1d10cs>8]]")
+        span(class="dice-icon") J
+        span(class="dice-icon") J
+        span(class="dice-icon") J
 
   section.description-section
     h2 Description du personnage
