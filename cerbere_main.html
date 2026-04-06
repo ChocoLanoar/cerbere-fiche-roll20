@@ -6,9 +6,9 @@
   <section class="dice-section">
     <h2>Jets de dés</h2>
     <div class="dice-buttons">
-      <button class="dice-btn" type="roll" value="Jet 1d10 : [[1d10cs&gt;8]]"><span class="dice-icon">J</span></button>
-      <button class="dice-btn" type="roll" value="Jet 2d10 : [[1d10cs&gt;8]] [[1d10cs&gt;8]]"><span class="dice-icon">J</span><span class="dice-icon">J</span></button>
-      <button class="dice-btn" type="roll" value="Jet 3d10 : [[1d10cs&gt;8]] [[1d10cs&gt;8]] [[1d10cs&gt;8]]"><span class="dice-icon">J</span><span class="dice-icon">J</span><span class="dice-icon">J</span></button>
+      <button class="dice-btn" type="roll" value="&amp;{template:cerbere} {{rollname=@{character_name} — Jet 1d10}} {{roll1=[[1d10]]}} {{roll1raw=$[[0]]}}"><span class="dice-icon">J</span></button>
+      <button class="dice-btn" type="roll" value="&amp;{template:cerbere} {{rollname=@{character_name} — Jet 2d10}} {{roll1=[[1d10]]}} {{roll1raw=$[[0]]}} {{roll2=[[1d10]]}} {{roll2raw=$[[1]]}}"><span class="dice-icon">J</span><span class="dice-icon">J</span></button>
+      <button class="dice-btn" type="roll" value="&amp;{template:cerbere} {{rollname=@{character_name} — Jet 3d10}} {{roll1=[[1d10]]}} {{roll1raw=$[[0]]}} {{roll2=[[1d10]]}} {{roll2raw=$[[1]]}} {{roll3=[[1d10]]}} {{roll3raw=$[[2]]}}"><span class="dice-icon">J</span><span class="dice-icon">J</span><span class="dice-icon">J</span></button>
     </div>
   </section>
   <section class="description-section">
@@ -167,3 +167,39 @@
     </div>
   </section>
 </div>
+<rolltemplate class="sheet-rolltemplate-cerbere">
+  <div class="rt-container">
+    <h3>{{rollname}}</h3>
+    <div class="rt-results">
+      {{#roll1}}
+      {{#rollLess() roll1raw 3}}
+      <div class="rt-die rt-fail">{{roll1}}</div>{{/rollLess() roll1raw 3}}
+      {{#rollBetween() roll1raw 3 7}}
+      <div class="rt-die rt-mid">{{roll1}}</div>{{/rollBetween() roll1raw 3 7}}
+      {{#rollGreater() roll1raw 7}}
+      <div class="rt-die rt-win">{{roll1}}</div>{{/rollGreater() roll1raw 7}}
+      {{/roll1}}
+      {{#roll2}}
+      {{#rollLess() roll2raw 3}}
+      <div class="rt-die rt-fail">{{roll2}}</div>{{/rollLess() roll2raw 3}}
+      {{#rollBetween() roll2raw 3 7}}
+      <div class="rt-die rt-mid">{{roll2}}</div>{{/rollBetween() roll2raw 3 7}}
+      {{#rollGreater() roll2raw 7}}
+      <div class="rt-die rt-win">{{roll2}}</div>{{/rollGreater() roll2raw 7}}
+      {{/roll2}}
+      {{#roll3}}
+      {{#rollLess() roll3raw 3}}
+      <div class="rt-die rt-fail">{{roll3}}</div>{{/rollLess() roll3raw 3}}
+      {{#rollBetween() roll3raw 3 7}}
+      <div class="rt-die rt-mid">{{roll3}}</div>{{/rollBetween() roll3raw 3 7}}
+      {{#rollGreater() roll3raw 7}}
+      <div class="rt-die rt-win">{{roll3}}</div>{{/rollGreater() roll3raw 7}}
+      {{/roll3}}
+    </div>
+    <div class="sheet-rt-legend">
+      <div class="sheet-rt-fail">1–2 Échec</div>
+      <div class="sheet-rt-mid">3–7 Réussite mineure / Échec mineur</div>
+      <div class="sheet-rt-win">8-10 Réussite majeure</div>
+    </div>
+  </div>
+</rolltemplate>

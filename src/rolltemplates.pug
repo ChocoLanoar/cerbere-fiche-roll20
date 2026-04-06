@@ -1,0 +1,43 @@
+rolltemplate.sheet-rolltemplate-cerbere
+  .rt-container
+    h3 {{rollname}}
+    .rt-results
+      | {{#roll1}}
+      | {{#rollLess() roll1raw 3}}
+      div(class="rt-die rt-fail") {{roll1}}
+      | {{/rollLess() roll1raw 3}}
+      | {{#rollBetween() roll1raw 3 7}}
+      div(class="rt-die rt-mid") {{roll1}}
+      | {{/rollBetween() roll1raw 3 7}}
+      | {{#rollGreater() roll1raw 7}}
+      div(class="rt-die rt-win") {{roll1}}
+      | {{/rollGreater() roll1raw 7}}
+      | {{/roll1}}
+
+      | {{#roll2}}
+      | {{#rollLess() roll2raw 3}}
+      div(class="rt-die rt-fail") {{roll2}}
+      | {{/rollLess() roll2raw 3}}
+      | {{#rollBetween() roll2raw 3 7}}
+      div(class="rt-die rt-mid") {{roll2}}
+      | {{/rollBetween() roll2raw 3 7}}
+      | {{#rollGreater() roll2raw 7}}
+      div(class="rt-die rt-win") {{roll2}}
+      | {{/rollGreater() roll2raw 7}}
+      | {{/roll2}}
+
+      | {{#roll3}}
+      | {{#rollLess() roll3raw 3}}
+      div(class="rt-die rt-fail") {{roll3}}
+      | {{/rollLess() roll3raw 3}}
+      | {{#rollBetween() roll3raw 3 7}}
+      div(class="rt-die rt-mid") {{roll3}}
+      | {{/rollBetween() roll3raw 3 7}}
+      | {{#rollGreater() roll3raw 7}}
+      div(class="rt-die rt-win") {{roll3}}
+      | {{/rollGreater() roll3raw 7}}
+      | {{/roll3}}
+    .sheet-rt-legend
+      .sheet-rt-fail 1–2 Échec
+      .sheet-rt-mid 3–7 Réussite mineure / Échec mineur
+      .sheet-rt-win 8-10 Réussite majeure

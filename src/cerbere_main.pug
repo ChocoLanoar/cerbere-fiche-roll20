@@ -9,12 +9,21 @@ include pages/character
   section.dice-section
     h2 Jets de dés
     .dice-buttons
-      button(type="roll", class='dice-btn', value="Jet 1d10 : [[1d10cs>8]]")
+      button(type="roll"
+        class='dice-btn'
+        value='&{template:cerbere} {{rollname=@{character_name} — Jet 1d10}} {{roll1=[[1d10]]}} {{roll1raw=$[[0]]}}'
+      )
         span(class="dice-icon") J
-      button(type="roll", class='dice-btn', value="Jet 2d10 : [[1d10cs>8]] [[1d10cs>8]]")
+      button(type="roll"
+        class='dice-btn'
+        value='&{template:cerbere} {{rollname=@{character_name} — Jet 2d10}} {{roll1=[[1d10]]}} {{roll1raw=$[[0]]}} {{roll2=[[1d10]]}} {{roll2raw=$[[1]]}}'
+      )
         span(class="dice-icon") J
         span(class="dice-icon") J
-      button(type="roll", class='dice-btn', value="Jet 3d10 : [[1d10cs>8]] [[1d10cs>8]] [[1d10cs>8]]")
+      button(type="roll"
+        class='dice-btn'
+        value='&{template:cerbere} {{rollname=@{character_name} — Jet 3d10}} {{roll1=[[1d10]]}} {{roll1raw=$[[0]]}} {{roll2=[[1d10]]}} {{roll2raw=$[[1]]}} {{roll3=[[1d10]]}} {{roll3raw=$[[2]]}}'
+      )
         span(class="dice-icon") J
         span(class="dice-icon") J
         span(class="dice-icon") J
@@ -27,3 +36,5 @@ include pages/character
 
     +character-view(spine.character)
     +character-edit(spine.character)
+
+include rolltemplates

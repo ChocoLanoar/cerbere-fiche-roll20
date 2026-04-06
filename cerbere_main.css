@@ -336,3 +336,86 @@
     font-size: 13px;
     border-radius: 4px;
 }
+
+/* --- ROLL TEMPLATES --- */
+/* Neutralise totalement le style Roll20 des inline rolls */
+.sheet-rolltemplate-cerbere .inlinerollresult,
+.sheet-rolltemplate-cerbere .inlinerollresult.showtip,
+.sheet-rolltemplate-cerbere .inlinerollresult.fullcrit,
+.sheet-rolltemplate-cerbere .inlinerollresult.fullfail,
+.sheet-rolltemplate-cerbere .inlinerollresult.importantroll {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    color: inherit !important;
+    font-weight: inherit !important;
+}
+
+/* --- CONTAINER --- */
+.sheet-rolltemplate-cerbere .sheet-rt-container {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #222;
+}
+
+/* --- TITRE --- */
+.sheet-rolltemplate-cerbere .sheet-rt-container h3 {
+    margin: 0 0 8px 0;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #444;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* --- LISTE DES DÉS --- */
+.sheet-rolltemplate-cerbere .sheet-rt-results {
+    display: flex;
+    gap: 8px;
+}
+
+/* --- STYLE DE CHAQUE DÉ --- */
+.sheet-rolltemplate-cerbere .sheet-rt-die {
+    width: 32px;
+    height: 32px;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* --- COULEURS SELON LE RÉSULTAT --- */
+.sheet-rolltemplate-cerbere .sheet-rt-fail {
+    border-color: #c62828;
+    color: #c62828;
+}
+
+.sheet-rolltemplate-cerbere .sheet-rt-mid {
+    border-color: #6a1b9a;
+    color: #6a1b9a;
+}
+
+.sheet-rolltemplate-cerbere .sheet-rt-win {
+    border-color: #2e7d32;
+    color: #2e7d32;
+}
+
+.sheet-rolltemplate-cerbere .sheet-rt-legend {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #444;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.sheet-rolltemplate-cerbere .sheet-rt-legend span {
+    font-weight: 700;
+}
